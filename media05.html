@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <title>미디어쿼리문 반응형ui</title>
+    
+    <style>
+
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        li {list-style-type: none;}
+        
+        #wrap ul {
+           max-width: 900px;
+           margin: 50px auto;
+           display: flex;
+           justify-content: space-between;
+        }
+        #wrap ul li{
+            width: 45%;
+        }
+        #wrap ul li > figure {
+            width: 100%;
+            height: 270px;
+            background: url(../media/img/photo01.jpg) no-repeat center/cover;
+
+        }
+        .text_box {
+            margin-top: 20px;
+        }
+        .text_box span {
+            display: inline-block;
+            padding: 1px 2px;
+            background: brown;
+            color: white;
+            box-sizing: border-box;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+
+
+
+        /* 테블릿 */
+        @media screen and (max-width: 768px){
+            ul {
+                width: 95%;
+                margin: 20 auto;
+                flex-direction: column;
+                justify-content: center;
+            }
+            ul li {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            ul li figure {
+                width: 50%;
+                height: 200px;
+                margin-bottom: 20px;
+            }
+        }
+        /* 모바일 */
+        @media screen and (max-width: 440px){
+ 
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <ul>
+            <li>
+                <figure></figure>
+                <div class="text_box">
+                    <span>캠핑</span>
+                    <p class="text">
+                        캠핑가자 캠핑가자 캠핑가자 캠핑가자 
+                        캠핑가자 캠핑가자 캠핑가자
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <figure></figure>
+                <div class="text_box">
+                    <span>캠핑</span>
+                    <p class="text">
+                        캠핑가자 캠핑가자 캠핑가자 캠핑가자 
+                        캠핑가자 캠핑가자 캠핑가자
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+        
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리 레이아웃</title>
+    <style>
+        #wrap {
+            max-width: 1200px;
+            margin: 2.5em auto; /* 40px auto */
+            border: 1px solid #ddd;
+            padding: 1.56em; /* 1.56*16 = 25px */
+            box-sizing: border-box;
+        }
+        #wrap * {text-transform: uppercase;}
+
+        strong {
+            font-size: 1.25em; /* 20px */
+            font-weight: normal;
+        }
+        header, section, aside, footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #333;
+            padding: 1.25em; /* 20px */
+            box-sizing: border-box;
+        }
+        header {
+            height: 7.5em; /* 120px */
+            margin-bottom: 1.5em;
+        }
+        main {
+            display: flex;
+            justify-content: space-between;  
+            margin-bottom: 1.25em;  /* 20px */       
+        }
+        main > section {
+            width: 70%;
+            height: 40vh;
+        }
+        main > aside {
+            width: 25%
+        }
+        footer {
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+        }
+
+        @media screen and (max-width: 567px) {
+            body {
+                font-size: 15px;
+            }
+            header {
+                height: 6.66em; /* 100px */
+            }
+            main {flex-direction: column;}
+            main > section, 
+            main > aside {
+                width: 100%;
+            }
+            main > section {
+                margin-bottom: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <strong>HEADER</strong>
+        </header>
+        <main>
+            <section>
+                <strong>section</strong>
+            </section>
+            <aside>
+                <strong>aside</strong>
+            </aside>
+        </main>
+        <footer>
+            <strong>footer</strong>
+        </footer>
+    </div>
+</body>
+</html>

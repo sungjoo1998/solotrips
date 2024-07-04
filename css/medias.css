@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+header {
+    background: green;
+    color: #fff;
+    padding: 25px 5% 0;   /* 고정 된다 pc, mobile*/
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin-bottom: 40px;
+    font-size: 44px;
+    font-weight: 600;
+}
+header p {
+    font-weight: 500;
+    font-size: 18px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 25px;
+}
+.site_nav .gnb {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+.site_nav .gnb li {
+    width: 15.5%;
+}
+.site_nav .gnb li > a {
+    display: block;
+    padding: 12px 0;
+    text-align: center;
+    background: brown;
+}
+
+/* contents */
+.contents {
+    max-width: 1280px; /* 반응형에서는 max-width 값으로 */
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.contents img {
+    max-width: 100%;
+}
+.contents section {
+    width: 75%;
+}
+.contents p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.contents h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.contents aside {
+    width: 20%;
+}
+.contents .infobox {
+    padding: 15px;
+    background: silver;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    margin-bottom: 20px;
+}
+footer {
+    border-top:  3px solid rgba(0,0,0,0.5);
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* table 768~1024*/
+@media screen and (min-width: 567px) and (max-width: 1024px) {
+    header {
+        background: seagreen;
+        padding: 25px 3% 0;
+    }
+    header h1 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+    .site_nav .gnb {
+        width: 100%;      /* 100%로 화면 사용 */
+        flex-wrap: wrap;
+    }
+    .site_nav .gnb li {
+        width: 32%;
+        margin-bottom: 1.3%;
+    }
+    .contents {
+        flex-direction: column;
+        padding: 0 1.5%;
+        box-sizing: border-box;
+    }
+    .contents section,
+    .contents aside {
+        width: 100%;
+    }
+    .contents img {
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 566px) {
+    .hide {display: none;}
+    header {
+        padding: 20px 1.5% 0;
+    }
+    header h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    .site_nav .gnb {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .site_nav .gnb li {
+        width: 48.5%;
+        margin-bottom: 1.5%;
+    }
+    .contents {
+        padding: 0 1.5%;
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+    .contents section,
+    .contents aside {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리문 레이아웃1</title>
+    
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style-type: none;}
+
+        /* pc */
+       #wrap {
+        max-width: 1200px;
+        margin: 50px a;
+        background: rgb(187, 114, 216);
+        padding: 25px;
+        box-sizing: border-box;
+       }
+       h2, h3 {
+        font-weight: 500;
+        text-align: center;
+        text-transform: uppercase;
+       }
+       header {
+        line-height: 150px;
+        height: 150px;
+        background: #cf4e4e;
+       }
+       main {
+        margin-top: 20px;
+       }
+       main ul {
+        display: flex;
+        justify-content: space-between;
+       }
+       main ul li {
+        width: 23.5%;
+        height: 300px;
+        line-height: 300px;
+        background: #69e29f;
+       }
+
+        /* 테블릿 */
+        @media screen and (max-width: 768px){
+            #wrap {margin-top: 0;}
+            header {
+                height: 100px;
+                line-height: 100px;
+            }
+            main ul {
+                flex-wrap: wrap;
+            }
+            main ul li {
+                width: 48.5%;
+                margin-bottom: 3%;
+            }
+        }
+        /* 모바일 */
+        @media screen and (max-width: 440px){
+            #wrap {margin-top: 0;}
+            header {
+                height: 80px;
+            }
+            main ul li {
+                width: 100%;
+                margin-bottom: 3%;
+                line-height: 160px;
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header><h2>header</h2></header>
+        <main>
+            <ul>
+                <li><h3>gallery01</h3></li>
+                <li><h3>gallery02</h3></li>
+                <li><h3>gallery03</h3></li>
+                <li><h3>gallery04</h3></li>
+            </ul>
+        </main>
+    </div>
+</body>
+</html>
